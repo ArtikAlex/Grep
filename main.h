@@ -10,7 +10,7 @@ typedef struct flags {
 } flags;
 
     int noArg(void);
-    void pars_flags(argc, argv,)
+    int pars_flags(int argc, char *argv[]) ;
 
 #endif //GREP_MAIN_H
 

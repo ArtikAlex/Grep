@@ -5,7 +5,7 @@ int getopt(int argc, char * const argv[],
 extern char *optarg;
 extern int optind, opterr, optopt;
 
-int main(int argc, char *argv[]) {
+int pars_flags(int argc, char *argv[]) {
     int rez = 0;
 
     while ( (rez = getopt(argc, argv, "eivclnhsfo")) != -1){

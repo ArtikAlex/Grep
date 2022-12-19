@@ -9,10 +9,8 @@ int main(int argc, char *argv[])
     } else if (argc == 2) {
         noArg();
     } else {
-        struct flags = {0};
-        void pars_flags();
-
-
+        struct flags = { 0 };
+        int pars_flags(int argc, char *argv[]);
     }
    // printf("%s", argv[1]);
    // noArg();
