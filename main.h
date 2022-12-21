@@ -1,5 +1,5 @@
-#ifndef GREP_MAIN_H
-#define GREP_MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <getopt.h>
@@ -9,14 +9,15 @@ typedef struct flags {
     int e, i, v, c, l, n, h, s, f, o;
 } flags;
 
-    int noArg(void);
-    int pars_flags(int argc, char *argv[]) ;
+    void noArg();
+    void pars_flags(flags *flag, char *argv[]);
 
-#endif //GREP_MAIN_H
+#endif //MAIN_H
 
 /*Опция	Описание
 -i	Игнорировать регистр. Не делать различия между большими и маленькими
-символами. Также можно задать опцией --ignore-case. -v	Инвертировать
+символами. Также можно задать опцией --ignore-case.
+ -v	Инвертировать
 соответствие. Обычно grep печатает строки, которые содержат соответствие. Эта
 опция приводит к тому, что grep выводит каждую строку, которая не содержит
 соответствия. Также можно использовать --invert-match.
@@ -27,5 +28,6 @@ typedef struct flags {
 печатает только имена файлов, которые не содержат совпадений. Другое имя опции
 --files-withoutmatch.
 -n	Добавление к началу каждой совпавшей строке номера строчки внутри файла.
-Другое имя опции --line-number. -h	Для поиска по нескольким файлам,
+Другое имя опции --line-number.
+ -h	Для поиска по нескольким файлам,
 подавлять вывод имени файла. Также можно указать опцией --no-filename.*/

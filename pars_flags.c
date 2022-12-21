@@ -1,26 +1,22 @@
 #include "main.h"
 
-int getopt(int argc, char * const argv[],
-           const char *optstring);
-extern char *optarg;
-extern int optind, opterr, optopt;
-
-int pars_flags(int argc, char *argv[]) {
+void pars_flags(flags *flag, char *argv[]) {
     int rez = 0;
-
+    int argc = 1;
     while ( (rez = getopt(argc, argv, "eivclnhsfo")) != -1){
         switch (rez) {
-            case 'e': flags->e = 1; break;
-            case 'i': flags->i = 1; break;
-            case 'v': flags->v = 1; break;
-            case 'c': flags->c = 1; break;
-            case 'l': flags->l = 1; break;
-            case 'n': flags->n = 1; break;
-            case 'h': flags->h = 1; break;
-            case 's': flags->s = 1; break;
-            case 'f': flags->f = 1; break;
-            case 'o': flags->o = 1; break;
+            case 'e': flag->e = 1; break;
+            case 'i': flag->i = 1; break;
+            case 'v': flag->v = 1; break;
+            case 'c': flag->c = 1; break;
+            case 'l': flag->l = 1; break;
+            case 'n': flag->n = 1; break;
+            case 'h': flag->h = 1; break;
+            case 's': flag->s = 1; break;
+            case 'f': flag->f = 1; break;
+            case 'o': flag->o = 1; break;
             case '?': printf("Error found !\n"); break;
         }
     }
 }
+

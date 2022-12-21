@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int noArg(void){
     char ch;
     ch = getchar();
