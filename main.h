@@ -5,12 +5,6 @@
 #include <getopt.h>
 #include <unistd.h>
 
-typedef struct flags {
-    int e, i, v, c, l, n, h, s, f, o;
-} flags;
-
-    void noArg();
-    void pars_flags(flags *flag, char *argv[]);
 
 #endif //MAIN_H
 

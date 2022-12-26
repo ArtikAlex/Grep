@@ -1,11 +1,7 @@
 #include <stdio.h>
 int noArg(void){
     char ch;
-    ch = getchar();
-    while (ch != '\t')
-    {
-        putchar(ch);
+    while ((ch = getchar()) != '#')
         ch = getchar();
-    }
     return 0;
 }
